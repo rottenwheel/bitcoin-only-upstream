@@ -262,24 +262,10 @@ export default {
 					ios: false,
 					android: false,
 					coincontrol: true,
-					coinjoin: true,
+					coinjoin: false,
 					onchain: true,
 					lightning: false,
 					multisig: true,
-					tor: true,
-					bip47: true,
-				},
-				{
-					title: 'Samourai Wallet',
-					link: 'https://samouraiwallet.com/',
-					desktop: false,
-					ios: false,
-					android: true,
-					coincontrol: true,
-					coinjoin: true,
-					onchain: true,
-					lightning: false,
-					multisig: false,
 					tor: true,
 					bip47: true,
 				},
@@ -353,12 +339,6 @@ export default {
 					link: 'https://muun.com/',
 					description: 'Relatively new wallet with novel multi-sig 2-of-2 spending.',
 					platform: 'iOS & Android'
-				},
-				{
-					title: 'Samourai Wallet',
-					link: 'https://samouraiwallet.com/',
-					description: 'The most feature rich and advanced Bitcoin wallet available on Android today',
-					platform: 'Android'
 				},
 				{
 					title: 'Simple Bitcoin Wallet',
