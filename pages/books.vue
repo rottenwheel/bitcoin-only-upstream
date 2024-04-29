@@ -119,7 +119,7 @@ export default {
 						},
 						{
 							title: 'Publisher',
-							link: 'https://bitcoinbook.shop/'
+							link: 'https://bitcoinbook.shop/products/bitcoin-and-the-trust-problem?Format=Paperback'
 						}
 					]
 				},
