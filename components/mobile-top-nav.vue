@@ -1,6 +1,8 @@
 <template>
-	<div id="mobile-top-navigation" :class="{ 'mobile-side-nav-open': sideNavOpen }">
-
+	<div
+		id="mobile-top-navigation"
+		:class="{ 'mobile-side-nav-open': sideNavOpen }"
+	>
 		<div class="mobile-menu-toggle">
 			<input type="checkbox" v-model="sideNavOpen" />
 			<span></span>
@@ -10,34 +12,20 @@
 
 		<div class="logo">
 			<nuxt-link to="/">
-				<img src="/bitcoin-only-logo.png" alt="Bitcoin Only">
+				<img src="/bitcoin-only-logo.png" alt="Bitcoin Only" />
 			</nuxt-link>
 		</div>
-
 	</div>
 </template>
 
 <style lang="scss" scoped>
-@import 'assets/css/mobile-top-nav.scss';
+@import "assets/css/mobile-top-nav.scss";
 </style>
 
-<script>
-export default {
+<script setup lang="ts">
+import { useLayoutStore } from "../stores/layout";
 
-	name: 'MobileTopNavigation',
+const layoutStore = useLayoutStore();
 
-	computed: {
-
-		sideNavOpen: {
-			get: function () {
-				return this.$store.state.showMobileSideNav
-			},
-			set: function (value) {
-				this.$store.commit('toggleMobileSideNav', value)
-			}
-		}
-
-	}
-
-}
+const sideNavOpen = computed(() => layoutStore.showMobileSideNav);
 </script>

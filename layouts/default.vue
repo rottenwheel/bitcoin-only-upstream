@@ -1,40 +1,29 @@
 <template>
 	<div class="layout">
-		<side-nav class="mobile-side-nav" :class="{ 'side-nav-open': sideNavOpen }"></side-nav>
+		<side-nav
+			class="mobile-side-nav"
+			:class="{ 'side-nav-open': sideNavOpen }"
+		></side-nav>
 		<div class="sidebar-bg"></div>
 		<div class="layout-wrapper">
 			<mobile-top-nav></mobile-top-nav>
 			<side-nav></side-nav>
 			<div class="main-content">
-				<nuxt/>
+				<slot />
 			</div>
 		</div>
 	</div>
 </template>
 
 <style lang="scss">
-@import 'assets/css/layout.scss';
+@import "assets/css/layout.scss";
 </style>
 
-<script>
-import SideNav from '~/components/side-nav'
-import MobileTopNav from '~/components/mobile-top-nav'
+<script setup lang="ts">
+import { computed } from "vue";
+import { useLayoutStore } from "@/stores/layout";
 
-export default {
+const layoutStore = useLayoutStore();
 
-	components: {
-		SideNav,
-		MobileTopNav
-	},
-
-	computed: {
-
-		sideNavOpen: {
-			get: function () {
-				return this.$store.state.showMobileSideNav
-			}
-		}
-
-	}
-}
+const sideNavOpen = computed(() => layoutStore.showMobileSideNav);
 </script>

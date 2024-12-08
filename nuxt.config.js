@@ -2,6 +2,8 @@ export default {
 	// Target (https://go.nuxtjs.dev/config-target)
 	target: 'static',
 
+	devtools: { enabled: false },
+
 	// Global page headers (https://go.nuxtjs.dev/config-head)
 	head: {
 		title: 'Bitcoin Only',
@@ -37,23 +39,16 @@ export default {
 	// Auto import components (https://go.nuxtjs.dev/config-components)
 	components: true,
 
-	// Router middleware
-	router: {
-		middleware: 'sidenav'
-	},
-
 	// Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
 	buildModules: [
 	],
 
 	// Modules (https://go.nuxtjs.dev/config-modules)
-	modules: [
-		// https://go.nuxtjs.dev/buefy
-		'nuxt-buefy',
-		['nuxt-matomo', { matomoUrl: '//stats.wiz.biz/', siteId: 1 }]
-	],
+	modules: ['@pinia/nuxt'],
 
 	// Build Configuration (https://go.nuxtjs.dev/config-build)
 	build: {
-	}
-}
+	},
+
+	compatibilityDate: '2024-12-08',
+};

@@ -4,17 +4,19 @@
 	"author": "marc-chouinard",
 	"private": true,
 	"scripts": {
-		"dev": "NUXT_HOST=0.0.0.0 PORT=1111 nuxt",
+		"dev": "nuxt dev",
 		"build": "nuxt build",
 		"start": "nuxt start",
 		"generate": "nuxt generate",
 		"lint": "eslint 'pages/**/*.{js,vue}'"
 	},
 	"dependencies": {
+		"@pinia/nuxt": "^0.9.0",
+		"buefy": "npm:@ntohq/buefy-next@^0.1.4",
 		"core-js": "^3.6.5",
 		"nuxt": "^3.12.4",
-		"nuxt-buefy": "^0.4.3",
-		"nuxt-matomo": "^1.2.4"
+		"nuxt-matomo": "^1.2.4",
+		"pinia": "^2.3.0"
 	},
 	"devDependencies": {
 		"@nuxt/types": "^2.18.1",
