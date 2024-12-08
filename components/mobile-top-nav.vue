@@ -1,8 +1,10 @@
 <template>
-	<div id="mobile-top-navigation" :class="{ 'mobile-side-nav-open': sideNavOpen }">
-
+	<div
+		id="mobile-top-navigation"
+		:class="{ 'mobile-side-nav-open': showMobileSideNav }"
+	>
 		<div class="mobile-menu-toggle">
-			<input type="checkbox" v-model="sideNavOpen" />
+			<input type="checkbox" v-model="showMobileSideNav" />
 			<span></span>
 			<span></span>
 			<span></span>
@@ -10,34 +12,18 @@
 
 		<div class="logo">
 			<nuxt-link to="/">
-				<img src="/bitcoin-only-logo.png" alt="Bitcoin Only">
+				<img src="/bitcoin-only-logo.png" alt="Bitcoin Only" />
 			</nuxt-link>
 		</div>
-
 	</div>
 </template>
 
 <style lang="scss" scoped>
-@import 'assets/css/mobile-top-nav.scss';
+@import "assets/css/mobile-top-nav.scss";
 </style>
 
-<script>
-export default {
+<script setup lang="ts">
+import { useState } from "nuxt/app";
 
-	name: 'MobileTopNavigation',
-
-	computed: {
-
-		sideNavOpen: {
-			get: function () {
-				return this.$store.state.showMobileSideNav
-			},
-			set: function (value) {
-				this.$store.commit('toggleMobileSideNav', value)
-			}
-		}
-
-	}
-
-}
+const showMobileSideNav = useState("showMobileSideNav", () => false);
 </script>

@@ -8,8 +8,8 @@
 			<h3>Getting Started</h3>
 
 			<ul>
-				<li> Samourai Wallet users: Buy a <a href="https://shop.nodl.it/en/home/38-nodl-samourai-edition.html" target="_blank">Nodl Samourai Edition</a>
-				<li> Blue Wallet users: Buy a <a href="http://mynodebtc.com/products/one" target="_blank">MyNode</a>
+				<li> Samourai Wallet users: Buy a <a href="https://shop.nodl.it/en/home/38-nodl-samourai-edition.html" target="_blank">Nodl Samourai Edition</a></li>
+				<li> Blue Wallet users: Buy a <a href="http://mynodebtc.com/products/one" target="_blank">MyNode</a></li>
 				<li> Secure your bitcoin: Buy a <a href="https://coldcardwallet.com/" target="_blank">Coldcard</a> hardware wallet</li>
 			</ul>
 

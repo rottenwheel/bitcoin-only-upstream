@@ -165,7 +165,7 @@
 					</div>
 					<div>
 						<template v-for="(dev, devIndex) in wallet.devs">
-							<a :key="devIndex" :href="dev.link" target="_blank">{{ dev.name }}</a><span v-if="devIndex + 1 < wallet.devs.length" :key="devIndex">, </span>
+							<a :href="dev.link" target="_blank">{{ dev.name }}</a><span v-if="devIndex + 1 < wallet.devs.length" :key="devIndex">, </span>
 						</template>
 					</div>
 					<div v-html="wallet.description"></div>
