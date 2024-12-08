@@ -4,6 +4,10 @@ export default {
 
 	devtools: { enabled: false },
 
+	devServer: {
+		port: 1111
+	},
+
 	// Global page headers (https://go.nuxtjs.dev/config-head)
 	app: {
 		head: {
