@@ -2,7 +2,7 @@
 	<div class="layout">
 		<side-nav
 			class="mobile-side-nav"
-			:class="{ 'side-nav-open': sideNavOpen }"
+			:class="{ 'side-nav-open': showMobileSideNav }"
 		></side-nav>
 		<div class="sidebar-bg"></div>
 		<div class="layout-wrapper">
@@ -20,10 +20,14 @@
 </style>
 
 <script setup lang="ts">
-import { computed } from "vue";
-import { useLayoutStore } from "@/stores/layout";
+import { watch } from "vue";
+import { useRoute } from "nuxt/app";
 
-const layoutStore = useLayoutStore();
+const route = useRoute();
+const showMobileSideNav = useState("showMobileSideNav", () => false);
 
-const sideNavOpen = computed(() => layoutStore.showMobileSideNav);
+watch(
+	() => route.fullPath,
+	() => (showMobileSideNav.value = false)
+);
 </script>

@@ -1,10 +1,10 @@
 <template>
 	<div
 		id="mobile-top-navigation"
-		:class="{ 'mobile-side-nav-open': sideNavOpen }"
+		:class="{ 'mobile-side-nav-open': showMobileSideNav }"
 	>
 		<div class="mobile-menu-toggle">
-			<input type="checkbox" v-model="sideNavOpen" />
+			<input type="checkbox" v-model="showMobileSideNav" />
 			<span></span>
 			<span></span>
 			<span></span>
@@ -23,9 +23,7 @@
 </style>
 
 <script setup lang="ts">
-import { useLayoutStore } from "../stores/layout";
+import { useState } from "nuxt/app";
 
-const layoutStore = useLayoutStore();
-
-const sideNavOpen = computed(() => layoutStore.showMobileSideNav);
+const showMobileSideNav = useState("showMobileSideNav", () => false);
 </script>
